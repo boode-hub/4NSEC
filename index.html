@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="description" content="4NSEC: Windows artifact forensics in the browser, ported from Eric Zimmerman's tools. Event logs, registry, $MFT and $J, prefetch, shortcuts, jump lists, SRUM, SQLite and more, parsed in the tab, with Sigma rules, cases and an investigation timeline. Nothing is uploaded." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Enforces the promise this tool makes rather than merely asserting it:
+      connect-src 'self' means evidence cannot be sent to any other origin, and
+      since the app is served from static hosting with no backend, there is
+      nowhere for it to go at all. object-src, base-uri and form-action are shut
+      so a crafted artifact rendered into the page has no route out either.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>4NSEC</title>
+    <script type="module" crossorigin src="./assets/index-B79DsZk2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CsgBCj_A.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
